@@ -9,14 +9,16 @@ module.exports = function() {
     router.get('/clientes', clientesController.mostrarClientes);
     router.get('/clientes/:id', clientesController.mostrarCliente);
     router.put('/clientes/:id', clientesController.actualizarCliente);
-    router.delete('clientes/:id', clientesController.eliminarCliente);
+    router.delete('/clientes/:id', clientesController.eliminarCliente);
     //Rutas Para Productos
     router.post('/productos', 
     productosController.subirArchivo,
     productosController.nuevoProducto);
     router.get('/productos', productosController.mostrarProductos);
     router.get('/productos/:id', productosController.mostrarProducto);
-    router.put('/productos/:id', productosController.actualizarProducto);
+    router.put('/productos/:id',
+    productosController.subirArchivo,
+    productosController.actualizarProducto);
     router.delete('/productos/:id', productosController.eliminarProducto);
     //Rutas Para Pedidos
     router.post('/pedidos', pedidosController.nuevoPedido);
