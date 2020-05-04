@@ -20,6 +20,7 @@ module.exports = function() {
     productosController.subirArchivo,
     productosController.actualizarProducto);
     router.delete('/productos/:id', productosController.eliminarProducto);
+    router.post('/productos/busqueda/:query', productosController.buscarProducto);
     //Rutas Para Pedidos
     router.post('/pedidos', pedidosController.nuevoPedido);
     router.get('/pedidos', pedidosController.mostrarPedidos);
