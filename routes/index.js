@@ -22,7 +22,7 @@ module.exports = function() {
     router.delete('/productos/:id', productosController.eliminarProducto);
     router.post('/productos/busqueda/:query', productosController.buscarProducto);
     //Rutas Para Pedidos
-    router.post('/pedidos', pedidosController.nuevoPedido);
+    router.post('/pedidos/nuevo/:id', pedidosController.nuevoPedido);
     router.get('/pedidos', pedidosController.mostrarPedidos);
     router.get('/pedidos/:id', pedidosController.mostrarPedido);
     router.put('/pedidos/:id', pedidosController.actualizarPedido);
