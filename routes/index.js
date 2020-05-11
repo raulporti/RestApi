@@ -4,9 +4,11 @@ const clientesController = require('../controllers/clientesController');
 const productosController = require('../controllers/productosController');
 const pedidosController = require('../controllers/pedidosController');
 const usuariosController = require('../controllers/usuariosController');
+//Middleware para proteger las rutas
+    const auth = require('../middlewares/auth');
 module.exports = function() {
     //Rutas Para Clientes
-    router.post('/clientes', clientesController.nuevoCliente);
+    router.post('/clientes',auth, clientesController.nuevoCliente);
     router.get('/clientes', clientesController.mostrarClientes);
     router.get('/clientes/:id', clientesController.mostrarCliente);
     router.put('/clientes/:id', clientesController.actualizarCliente);
