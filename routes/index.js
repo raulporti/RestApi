@@ -9,7 +9,7 @@ const usuariosController = require('../controllers/usuariosController');
 module.exports = function() {
     //Rutas Para Clientes
     router.post('/clientes',auth, clientesController.nuevoCliente);
-    router.get('/clientes', clientesController.mostrarClientes);
+    router.get('/clientes', auth, clientesController.mostrarClientes);
     router.get('/clientes/:id', clientesController.mostrarCliente);
     router.put('/clientes/:id', clientesController.actualizarCliente);
     router.delete('/clientes/:id', clientesController.eliminarCliente);
