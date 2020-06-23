@@ -11,13 +11,6 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://m001-student:prueba@sandbox-li4ev.mongodb.net/restpais?retryWrites=true&w=majority', {
     useNewUrlParser: true
 });
-/*MongoClient.connect(uri, function(err, client) {
-    if(err) {
-        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
-    }
-    console.log('Connected...');
-    // perform actions on the collection object
-});*/
 //Iniciar el servidor Express
 const app = express();
 //Habilitar body Parser
